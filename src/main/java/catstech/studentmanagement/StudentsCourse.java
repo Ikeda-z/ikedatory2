@@ -1,5 +1,6 @@
 package catstech.studentmanagement;
 
+import java.time.LocalDateTime;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -10,6 +11,6 @@ public class StudentsCourse {
   private String id;
   private String studentId;
   private String course;
-  private String courseStartDate;
-  private String courseEndDate;
+  private LocalDateTime courseStartDate;
+  private LocalDateTime courseEndDate;
 }
