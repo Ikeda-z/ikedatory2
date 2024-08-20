@@ -1,4 +1,4 @@
-package catstech.studentmanagement;
+package catstech.studentmanagement.data;
 
 import java.time.LocalDateTime;
 import lombok.Getter;

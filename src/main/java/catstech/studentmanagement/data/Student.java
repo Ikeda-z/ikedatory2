@@ -1,4 +1,4 @@
-package catstech.studentmanagement;
+package catstech.studentmanagement.data;
 
 import lombok.Getter;
 import lombok.Setter;
