@@ -7,8 +7,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="950778b8-04c8-498c-8387-511766dabe50" name="変更" comment="studentCourseを全件表示するコード">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+    <list default="true" id="950778b8-04c8-498c-8387-511766dabe50" name="変更" comment="converterの追加とremarkとisDeletedの追加">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/studentList.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.8/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.8/checksums/checksums.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.8/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.8/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.8/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.8/executionHistory/executionHistory.lock" afterDir="false" />
@@ -17,9 +17,11 @@
       <change beforePath="$PROJECT_DIR$/.gradle/8.8/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.8/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/catstech/studentmanagement/repository/StudentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/catstech/studentmanagement/repository/StudentRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/catstech/studentmanagement/service/StudentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/catstech/studentmanagement/service/StudentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/catstech/studentmanagement/controller/StudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/catstech/studentmanagement/controller/StudentController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,9 +29,6 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ExternalProjectsData">
-    <projectState path="$PROJECT_DIR$">
-      <ProjectState />
-    </projectState>
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
@@ -56,6 +55,7 @@
       <list>
         <option value="Interface" />
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -75,7 +75,7 @@
     </excluded-from-favorite>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="studentlist" />
+        <entry key="$PROJECT_DIR$" value="master" />
         <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
@@ -84,35 +84,52 @@
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {}
 }</component>
-  <component name="GitHubPullRequestState"><![CDATA[{
-  "prStates": [
+  <component name="GitHubPullRequestState">{
+  &quot;prStates&quot;: [
     {
-      "id": {
-        "id": "PR_kwDOMRyidM52wEnh",
-        "number": 1
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMRyidM52wEnh&quot;,
+        &quot;number&quot;: 1
       },
-      "lastSeen": 1722435171243
+      &quot;lastSeen&quot;: 1722435171243
     },
     {
-      "id": {
-        "id": "PR_kwDOMRyidM52wM8R",
-        "number": 2
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMRyidM52wM8R&quot;,
+        &quot;number&quot;: 2
       },
-      "lastSeen": 1722443493580
+      &quot;lastSeen&quot;: 1722443493580
     },
     {
-      "id": {
-        "id": "PR_kwDOMRyidM53JMIe",
-        "number": 4
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMRyidM53JMIe&quot;,
+        &quot;number&quot;: 4
       },
-      "lastSeen": 1724117535822
+      &quot;lastSeen&quot;: 1724117535822
+    },
+    {
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMRyidM540BWk&quot;,
+        &quot;number&quot;: 5
+      },
+      &quot;lastSeen&quot;: 1724204207317
     }
   ]
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/Ikeda-z/studentmanagement.git&quot;,
     &quot;accountId&quot;: &quot;46f8b783-93b0-466d-ac5f-e7f6c82cbfdf&quot;
+  },
+  &quot;recentNewPullRequestHead&quot;: {
+    &quot;server&quot;: {
+      &quot;useHttp&quot;: false,
+      &quot;host&quot;: &quot;github.com&quot;,
+      &quot;port&quot;: null,
+      &quot;suffix&quot;: null
+    },
+    &quot;owner&quot;: &quot;Ikeda-z&quot;,
+    &quot;repository&quot;: &quot;studentmanagement&quot;
   }
 }</component>
   <component name="ProblemsViewState">
@@ -129,11 +146,13 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
     "Gradle.StudentManagement [:StudentmanagementApplication.main()].executor": "Run",
+    "Gradle.StudentManagement [:catstech.studentmanagement.StudentmanagementApplication.main()].executor": "Run",
     "Gradle.studentmanagement [:StudentmanagementApplication.main()].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "30",
+    "git-widget-placeholder": "Thymeleeaf",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/Owner/Desktop/StudentManagement",
@@ -164,6 +183,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="アプリケーション.StudentmanagementApplication" />
+        <item itemvalue="アプリケーション.StudentmanagementApplication" />
+        <item itemvalue="アプリケーション.StudentmanagementApplication" />
+        <item itemvalue="アプリケーション.StudentmanagementApplication" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="アプリケーションレベル" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
@@ -281,7 +308,31 @@
       <option name="project" value="LOCAL" />
       <updated>1724121879549</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="studentCourseを全件表示するコード">
+      <option name="closed" value="true" />
+      <created>1724134635559</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1724134635559</updated>
+    </task>
+    <task id="LOCAL-00015" summary="30代受講者とJavaコース受講者を全件表示してから、抽出するコードです。">
+      <option name="closed" value="true" />
+      <created>1724134723227</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1724134723227</updated>
+    </task>
+    <task id="LOCAL-00016" summary="converterの追加とremarkとisDeletedの追加">
+      <option name="closed" value="true" />
+      <created>1724216590556</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1724216590556</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -301,6 +352,8 @@
     <MESSAGE value="第５回演習課題" />
     <MESSAGE value="WHERE以降をなくし全件表示するコード" />
     <MESSAGE value="studentCourseを全件表示するコード" />
-    <option name="LAST_COMMIT_MESSAGE" value="studentCourseを全件表示するコード" />
+    <MESSAGE value="30代受講者とJavaコース受講者を全件表示してから、抽出するコードです。" />
+    <MESSAGE value="converterの追加とremarkとisDeletedの追加" />
+    <option name="LAST_COMMIT_MESSAGE" value="converterの追加とremarkとisDeletedの追加" />
   </component>
 </project>

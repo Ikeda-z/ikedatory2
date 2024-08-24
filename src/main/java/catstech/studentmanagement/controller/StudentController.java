@@ -3,14 +3,15 @@ package catstech.studentmanagement.controller;
 import catstech.studentmanagement.controller.converter.StudentConverter;
 import catstech.studentmanagement.data.Student;
 import catstech.studentmanagement.data.StudentsCourse;
-import catstech.studentmanagement.domain.StudentDetail;
 import catstech.studentmanagement.service.StudentService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
 
-@RestController
+
+@Controller
 public class StudentController {
 
   private StudentService service;
@@ -23,11 +24,12 @@ public class StudentController {
   }
 
   @GetMapping("/studentList")
-  public List<StudentDetail> getStudentList(){
+  public String getStudentList(Model model){
     List<Student> students = service.searchStudentList();
     List<StudentsCourse> studentsCourses = service.searchStudentsCourseList();
 
-    return converter.convertStudentDetails(students, studentsCourses);
+    model.addAttribute("studentList", converter.convertStudentDetails(students, studentsCourses));
+    return "StudentList";
   }
 
   @GetMapping("/studentsCourseList")
