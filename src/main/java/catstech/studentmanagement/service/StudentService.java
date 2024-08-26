@@ -2,6 +2,7 @@ package catstech.studentmanagement.service;
 
 import catstech.studentmanagement.data.Student;
 import catstech.studentmanagement.data.StudentsCourse;
+import catstech.studentmanagement.domain.StudentDetail;
 import catstech.studentmanagement.repository.StudentRepository;
 import java.util.List;
 
@@ -24,6 +25,10 @@ public class StudentService {
 
   public List<StudentsCourse> searchStudentsCourseList() {
     return repository.searchStudentsCourses();
+  }
+
+  public void registerStudent(StudentDetail studentDetail){
+    repository.registerStudent(studentDetail.getStudent());
   }
 }
 

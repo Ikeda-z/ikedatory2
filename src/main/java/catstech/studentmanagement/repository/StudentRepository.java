@@ -3,6 +3,7 @@ package catstech.studentmanagement.repository;
 import catstech.studentmanagement.data.Student;
 import catstech.studentmanagement.data.StudentsCourse;
 import java.util.List;
+import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 
@@ -26,6 +27,9 @@ public interface StudentRepository {
 
   @Select("SELECT * FROM students_courses")
   List<StudentsCourse> searchStudentsCourses();
+
+  @Insert("INSERT INTO students(id,name,furigana,nickname,mail_address,address,age,gender,remark,isDeleted)" + "VALUES(#{id},#{name},#{furigana},#{nickname},#{mailAddress},#{address},#{age},#{gender},#{remark},false)")
+  void registerStudent(Student student);
 
 }
 
