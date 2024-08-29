@@ -2,9 +2,10 @@ package catstech.studentmanagement.controller;
 
 import catstech.studentmanagement.controller.converter.StudentConverter;
 import catstech.studentmanagement.data.Student;
-import catstech.studentmanagement.data.StudentsCourse;
+import catstech.studentmanagement.data.StudentsCourses;
 import catstech.studentmanagement.domain.StudentDetail;
 import catstech.studentmanagement.service.StudentService;
+import java.util.Arrays;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -30,20 +31,22 @@ public class StudentController {
   @GetMapping("/studentList")
   public String getStudentList(Model model){
     List<Student> students = service.searchStudentList();
-    List<StudentsCourse> studentsCourses = service.searchStudentsCourseList();
+    List<StudentsCourses> studentsCourses = service.searchStudentsCourseList();
 
     model.addAttribute("studentList", converter.convertStudentDetails(students, studentsCourses));
     return "StudentList";
   }
 
   @GetMapping("/studentsCourseList")
-  public List<StudentsCourse> getStudentsCourseList(){
+  public List<StudentsCourses> getStudentsCourseList(){
     return service.searchStudentsCourseList();
   }
 
   @GetMapping("/newStudent")
   public String newStudent(Model model){
-    model.addAttribute("studentDetail", new StudentDetail());
+    StudentDetail studentDetail = new StudentDetail();
+    studentDetail.setStudentsCourses(Arrays.asList(new StudentsCourses()));
+    model.addAttribute("studentDetail", studentDetail);
     return "registerStudent";
   }
 
@@ -52,8 +55,8 @@ public class StudentController {
     if(result.hasErrors()){
       return "registerStudent";
     }
-
     service.registerStudent(studentDetail);
+
     return "redirect:/studentList";
   }
 }

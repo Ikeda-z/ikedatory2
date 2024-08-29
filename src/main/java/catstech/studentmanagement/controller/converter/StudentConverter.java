@@ -1,7 +1,7 @@
 package catstech.studentmanagement.controller.converter;
 
 import catstech.studentmanagement.data.Student;
-import catstech.studentmanagement.data.StudentsCourse;
+import catstech.studentmanagement.data.StudentsCourses;
 import catstech.studentmanagement.domain.StudentDetail;
 import java.util.ArrayList;
 import java.util.List;
@@ -12,13 +12,13 @@ import org.springframework.stereotype.Component;
 public class StudentConverter {
 
   public static List<StudentDetail> convertStudentDetails(List<Student> students,
-      List<StudentsCourse> studentsCourses) {
+      List<StudentsCourses> studentsCourses) {
     List<StudentDetail> studentDetails = new ArrayList<>();
     students.forEach(student -> {
       StudentDetail studentDetail = new StudentDetail();
       studentDetail.setStudent(student);
 
-      List<StudentsCourse> convertStudentCourses = studentsCourses.stream()
+      List<StudentsCourses> convertStudentCourses = studentsCourses.stream()
           .filter(studentCourse -> student.getId().equals(studentCourse.getStudentId()))
           .collect(Collectors.toList());
       studentDetail.setStudentsCourses(convertStudentCourses);

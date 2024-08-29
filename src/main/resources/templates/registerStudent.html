@@ -7,11 +7,7 @@
 <body>
 <h1>受講生登録</h1>
 <form th:action="@{/registerStudent}" th:object="${studentDetail}" method="post">
-  <div>
-    <label for="id">ID:</label>
-    <input type="text" id="id" th:field="*{student.id}" required/>
-  </div>
-  <div>
+    <div>
     <label for="name">名前:</label>
     <input type="text" id="name" th:field="*{student.name}" required/>
   </div>
@@ -40,6 +36,12 @@
     <input type="text" id="gender" th:field="*{student.gender}" required/>
   </div>
   <div>
+    <label for="remark">備考:</label>
+    <input type="text" id="remark" th:field="*{student.remark}" />
+  </div>
+  <div th:each="course, stat : *{studentsCourses}">
+    <label for="course" th:id="studentCourse.__${stat.index}__.course">受講コース名:</label>
+    <input type="text" id="course" th:id="studentCourse.__${stat.index}__.course" th:field="*{studentsCourses[__${stat.index}__].course}" />
   </div>
   <div>
     <button type="submit">登録</button>

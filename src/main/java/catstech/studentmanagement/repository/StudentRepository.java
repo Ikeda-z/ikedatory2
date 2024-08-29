@@ -1,10 +1,11 @@
 package catstech.studentmanagement.repository;
 
 import catstech.studentmanagement.data.Student;
-import catstech.studentmanagement.data.StudentsCourse;
+import catstech.studentmanagement.data.StudentsCourses;
 import java.util.List;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Options;
 import org.apache.ibatis.annotations.Select;
 
 /**
@@ -26,10 +27,17 @@ public interface StudentRepository {
   List<Student> search();
 
   @Select("SELECT * FROM students_courses")
-  List<StudentsCourse> searchStudentsCourses();
+  List<StudentsCourses> searchStudentsCourses();
 
-  @Insert("INSERT INTO students(id,name,furigana,nickname,mail_address,address,age,gender,remark,isDeleted)" + "VALUES(#{id},#{name},#{furigana},#{nickname},#{mailAddress},#{address},#{age},#{gender},#{remark},false)")
+  @Insert("INSERT INTO students(name,furigana,nickname,mail_address,address,age,gender,remark,isDeleted)"
+      + "VALUES(#{name},#{furigana},#{nickname},#{mailAddress},#{address},#{age},#{gender},#{remark},false)")
+  @Options(useGeneratedKeys = true, keyProperty = "id")
   void registerStudent(Student student);
+
+  @Insert("INSERT INTO students_courses(student_id,  course, course_start_date, course_end_date)"
+      + "VALUES(#{studentId}, #{course}, #{courseStartDate}, #{courseEndDate})")
+  @Options(useGeneratedKeys = true, keyProperty = "id")
+  void  regiserStudentsCourses(StudentsCourses studentsCourses);
 
 }
 
