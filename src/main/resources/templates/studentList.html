@@ -20,15 +20,17 @@
   </thead>
   <tbody>
   <tr th:each="studentDetail : ${studentList}">
-    <th th:text="${studentDetail.student.id}">1</th>
-    <th th:text="${studentDetail.student.name}">北田ちせ</th>
-    <th th:text="${studentDetail.student.furigana}">きただちせ</th>
-    <th th:text="${studentDetail.student.nickname}">ち</th>
-    <th th:text="${studentDetail.student.mailAddress}">hogehoge@gmail.com</th>
-    <th th:text="${studentDetail.student.address}">品川区</th>
-    <th th:text="${studentDetail.student.age}">20</th>
-    <th th:text="${studentDetail.student.gender}">F</th>
-    <th th:text="${studentDetail.student.remark}">特になし</th>
+    <td th:text="${studentDetail.student.id}">1</td>
+    <td>
+    <a href="/studentList" th:href="@{/student/{id}(id=${studentDetail.student.id})}" th:text="${studentDetail.student.name}">北田ちせ</a>
+    </td>
+    <td th:text="${studentDetail.student.furigana}">きただちせ</td>
+    <td th:text="${studentDetail.student.nickname}">ち</td>
+    <td th:text="${studentDetail.student.mailAddress}">hogehoge@gmail.com</td>
+    <td th:text="${studentDetail.student.address}">品川区</td>
+    <td th:text="${studentDetail.student.age}">20</td>
+    <td th:text="${studentDetail.student.gender}">F</td>
+    <td th:text="${studentDetail.student.remark}">特になし</td>
   </tr>
   </tbody>
 </table>

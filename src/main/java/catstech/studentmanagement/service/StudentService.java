@@ -25,21 +25,40 @@ public class StudentService {
     return repository.search();
   }
 
+  public StudentDetail searchStudent(String id){
+    Student student = repository.searchStudent(id);
+    List<StudentsCourses> studentsCourses = repository.searchStudentsCourses(student.getId());
+    StudentDetail studentDetail = new StudentDetail();
+    studentDetail.setStudent(student);
+    studentDetail.setStudentsCourses(studentsCourses);
+    return studentDetail;
+  }
+
   public List<StudentsCourses> searchStudentsCourseList() {
-    return repository.searchStudentsCourses();
+    return repository.searchStudentsCoursesList();
   }
 
   @Transactional
-  public void registerStudent(StudentDetail studentDetail){
+  public void registerStudent(StudentDetail studentDetail) {
     repository.registerStudent(studentDetail.getStudent());
     //TODO:コース情報登録も行う
-    for (StudentsCourses studentsCourse:studentDetail.getStudentsCourses()) {
+    for (StudentsCourses studentsCourse : studentDetail.getStudentsCourses()) {
       studentsCourse.setStudentId(studentDetail.getStudent().getId());
       studentsCourse.setCourseStartDate(LocalDateTime.now());
       studentsCourse.setCourseEndDate(LocalDateTime.now().plusYears(1));
       repository.regiserStudentsCourses(studentsCourse);
     }
   }
+
+  @Transactional
+  public void updateStudent(StudentDetail studentDetail) {
+    repository.updateStudent(studentDetail.getStudent());
+    for (StudentsCourses studentsCourse : studentDetail.getStudentsCourses()) {
+      repository.updateStudentsCourses(studentsCourse);
+    }
+  }
 }
+
+
 
 
