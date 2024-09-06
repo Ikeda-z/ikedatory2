@@ -3,6 +3,7 @@ package catstech.studentmanagement.repository;
 import catstech.studentmanagement.data.Student;
 import catstech.studentmanagement.data.StudentsCourses;
 import java.util.List;
+import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Options;
@@ -24,7 +25,7 @@ public interface StudentRepository {
    * @return全件検索をした受講生情報の一覧
    */
 
-  @Select("SELECT * FROM students")
+  @Select("SELECT * FROM students WHERE isDeleted = false")
   List<Student> search();
 
   @Select("SELECT * FROM students WHERE id = #{id}")
@@ -32,6 +33,9 @@ public interface StudentRepository {
 
   @Select("SELECT * FROM students_courses")
   List<StudentsCourses> searchStudentsCoursesList();
+
+  @Select("SELECT * FROM students WHERE is_Deleted = false")
+  List<Student> getAllStudents();
 
   @Select("SELECT * FROM students_courses WHERE student_id = #{studentId}")
   List <StudentsCourses> searchStudentsCourses(String studnetId);
@@ -55,6 +59,7 @@ public interface StudentRepository {
 
   @Update("UPDATE students_courses SET course = #{course} WHERE id = #{id}" )
   void  updateStudentsCourses(StudentsCourses studentsCourses);
+
 }
 
 

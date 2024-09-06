@@ -5,6 +5,7 @@ import catstech.studentmanagement.data.StudentsCourses;
 import java.util.List;
 import lombok.Getter;
 import lombok.Setter;
+import org.apache.ibatis.annotations.Options;
 
 @Getter
 @Setter
@@ -12,5 +13,7 @@ import lombok.Setter;
 
   private Student student;
   private List<StudentsCourses> studentsCourses;
+
 }
+
 
