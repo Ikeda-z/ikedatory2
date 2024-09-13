@@ -1,7 +1,7 @@
 package catstech.studentmanagement.domain;
 
 import catstech.studentmanagement.data.Student;
-import catstech.studentmanagement.data.StudentsCourses;
+import catstech.studentmanagement.data.StudentCourse;
 import java.util.List;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -16,7 +16,7 @@ import lombok.Setter;
   public class StudentDetail {
 
   private Student student;
-  private List<StudentsCourses> studentsCourses;
+  private List<StudentCourse> studentCourseList;
 
 }
 

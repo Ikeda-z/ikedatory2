@@ -1,7 +1,7 @@
 package catstech.studentmanagement.repository;
 
 import catstech.studentmanagement.data.Student;
-import catstech.studentmanagement.data.StudentsCourses;
+import catstech.studentmanagement.data.StudentCourse;
 import java.util.List;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
@@ -21,8 +21,6 @@ public interface StudentRepository {
    *
    * @return　受講生一覧(全件)
    */
-
-  @Select("SELECT * FROM students")
   List<Student> search();
 
   /**
@@ -31,7 +29,6 @@ public interface StudentRepository {
    * @param id　受講生ID
    * @return　受講生
    */
-  @Select("SELECT * FROM students WHERE id = #{id}")
   Student searchStudent(String id);
 
   /**
@@ -39,54 +36,45 @@ public interface StudentRepository {
    *
    * @return　受講生のコース情報(全件)
    */
-  @Select("SELECT * FROM students_courses")
-  List<StudentsCourses> searchStudentsCoursesList();
+  List<StudentCourse> searchStudentCourseList();
 
   /**
    * 受講生IDに紐づく受講生コース情報を検索します。
    *
-   * @param studnetId　受講生ID
+   * @param studentId　受講生ID
    * @return　受講生IDに紐づく受講生コース情報
    */
-  @Select("SELECT * FROM students_courses WHERE student_id = #{studentId}")
-  List <StudentsCourses> searchStudentsCourses(String studnetId);
+  List <StudentCourse> searchStudentsCourses(String studentId);
 
   /**
-   * 受講生の情報をデータベースに登録します。
+   * 受講生を新規登録します。
+   * IDに関しては自動採番を行います。
    *
-   * @param student　登録する受講生の情報
+   *
+   * @param student　受講生
    */
-  @Insert("INSERT INTO students(name,furigana,nickname,mail_address,address,age,gender,remark,isDeleted)"
-      + "VALUES(#{name},#{furigana},#{nickname},#{mailAddress},#{address},#{age},#{gender},#{remark},false)")
-  @Options(useGeneratedKeys = true, keyProperty = "id")
   void registerStudent(Student student);
 
   /**
-   * 受講生コース情報をデータベースに登録します。
+   * 受講生コース情報を新規登録します。
    *
-   * @param studentsCourses　登録する受講生のコース情報
+   * @param studentCourse　受講生コース情報
    */
-  @Insert("INSERT INTO students_courses(student_id,  course, course_start_date, course_end_date)"
-      + "VALUES(#{studentId}, #{course}, #{courseStartDate}, #{courseEndDate})")
-  @Options(useGeneratedKeys = true, keyProperty = "id")
-  void  regiserStudentsCourses(StudentsCourses studentsCourses);
+  void regiserStudentCourse(StudentCourse studentCourse);
 
   /**
-   * 更新した受講生情報をデータベースに登録します。
+   * 受講生を更新します。
    *
-   * @param student　更新する受講生情報
+   * @param student　受講生
    */
-  @Update("UPDATE students SET name = #{name},furigana = #{furigana},nickname = #{nickname},mail_Address = #{mailAddress},"
-      + "address = #{address},age = #{age},gender = #{gender},remark = #{remark},isDeleted =#{isDeleted} WHERE id = #{id}")
   void updateStudent(Student student);
 
   /**
-   * 更新する受講生コース情報をデータベースに登録します。
+   * 受講生コース情報のコース名を更新します。
    *
-   * @param studentsCourses　更新する受講生コース情報
+   * @param studentCourse　受講生コース情報
    */
-  @Update("UPDATE students_courses SET course = #{course} WHERE id = #{id}" )
-  void  updateStudentsCourses(StudentsCourses studentsCourses);
+  void updateStudentCourse(StudentCourse studentCourse);
 
 }
 
