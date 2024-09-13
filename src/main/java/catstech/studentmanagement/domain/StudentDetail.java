@@ -2,6 +2,7 @@ package catstech.studentmanagement.domain;
 
 import catstech.studentmanagement.data.Student;
 import catstech.studentmanagement.data.StudentCourse;
+import jakarta.validation.Valid;
 import java.util.List;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -15,7 +16,10 @@ import lombok.Setter;
 
   public class StudentDetail {
 
+  @Valid
   private Student student;
+
+  @Valid
   private List<StudentCourse> studentCourseList;
 
 }
