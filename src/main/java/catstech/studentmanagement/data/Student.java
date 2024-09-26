@@ -1,11 +1,13 @@
 package catstech.studentmanagement.data;
 
+import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;
 import lombok.Getter;
 import lombok.Setter;
 
+@Schema(description = "受講生")
 @Getter
 @Setter
 public class Student {
@@ -30,7 +32,6 @@ public class Student {
   @NotBlank
   private String address;
 
-  @NotBlank
   private int age;
 
   @NotBlank
