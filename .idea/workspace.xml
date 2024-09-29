@@ -8,8 +8,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="950778b8-04c8-498c-8387-511766dabe50" name="変更" comment="新規受講生登録">
-      <change afterPath="$PROJECT_DIR$/src/main/java/catstech/studentmanagement/controller/ExceptionHandle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/catstech/studentmanagement/exception/TestException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/catstech/studentmanagement/service/StudentServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.8/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.8/checksums/checksums.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.8/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.8/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.8/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.8/executionHistory/executionHistory.lock" afterDir="false" />
@@ -17,15 +16,12 @@
       <change beforePath="$PROJECT_DIR$/.gradle/8.8/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.8/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.8/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.8/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/catstech/studentmanagement/StudentmanagementApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/catstech/studentmanagement/StudentmanagementApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/catstech/studentmanagement/controller/StudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/catstech/studentmanagement/controller/StudentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/catstech/studentmanagement/data/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/catstech/studentmanagement/data/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/catstech/studentmanagement/data/StudentCourse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/catstech/studentmanagement/data/StudentCourse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/catstech/studentmanagement/domain/StudentDetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/catstech/studentmanagement/domain/StudentDetail.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/studentRepository.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/studentRepository.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/catstech/studentmanagement/StudentmanagementApplicationTests.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,6 +60,7 @@
         <option value="HTML File" />
         <option value="package-info" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -159,12 +156,16 @@
     &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
     &quot;Gradle.StudentManagement [:StudentmanagementApplication.main()].executor&quot;: &quot;Run&quot;,
     &quot;Gradle.StudentManagement [:catstech.studentmanagement.StudentmanagementApplication.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.StudentServiceTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.StudentServiceTest.受講生詳細の一覧検索機能_全件検索が動作すること.executor&quot;: &quot;Run&quot;,
     &quot;Gradle.studentmanagement [:StudentmanagementApplication.main()].executor&quot;: &quot;Run&quot;,
     &quot;Gradle.studentmanagement [:catstech.studentmanagement.StudentmanagementApplication.main()].executor&quot;: &quot;Run&quot;,
     &quot;Gradle.studentmanagement.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;OpenAPI&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;JUnitとAssertionとMockito＿Serviceのテスト&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/Owner/Desktop/StudentManagement&quot;,
@@ -181,8 +182,14 @@
       <recent name="catstech.studentmanagement.service" />
       <recent name="catstech.studentmanagement" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="catstech.studentmanagement.service" />
+    </key>
   </component>
-  <component name="RunManager" selected="アプリケーション.名前未設定">
+  <component name="RunManager" selected="Gradle.StudentServiceTest">
     <configuration name="名前未設定" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="21" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -191,6 +198,54 @@
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
+    </configuration>
+    <configuration name="StudentServiceTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;catstech.studentmanagement.service.StudentServiceTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="StudentServiceTest.受講生詳細の一覧検索機能_全件検索が動作すること" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;catstech.studentmanagement.service.StudentServiceTest.受講生詳細の一覧検索機能_全件検索が動作すること&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
     </configuration>
     <configuration name="studentmanagement" type="GradleRunConfiguration" factoryName="Gradle" nameIsGenerated="true">
       <ExternalSystemSettings>
@@ -213,9 +268,17 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="アプリケーション.名前未設定" />
       <item itemvalue="Gradle.studentmanagement" />
+      <item itemvalue="Gradle.StudentServiceTest" />
+      <item itemvalue="Gradle.StudentServiceTest.受講生詳細の一覧検索機能_全件検索が動作すること" />
+      <item itemvalue="アプリケーション.名前未設定" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.StudentServiceTest" />
+        <item itemvalue="Gradle.StudentServiceTest.受講生詳細の一覧検索機能_全件検索が動作すること" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="アプリケーションレベル" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
@@ -413,7 +476,15 @@
       <option name="project" value="LOCAL" />
       <updated>1726202277078</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="新規受講生登録">
+      <option name="closed" value="true" />
+      <created>1727325260455</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1727325260455</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

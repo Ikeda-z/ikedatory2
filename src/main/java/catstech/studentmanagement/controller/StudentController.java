@@ -2,7 +2,6 @@ package catstech.studentmanagement.controller;
 
 
 import catstech.studentmanagement.domain.StudentDetail;
-import catstech.studentmanagement.exception.TestException;
 import catstech.studentmanagement.service.StudentService;
 import io.swagger.v3.oas.annotations.Operation;
 import jakarta.validation.Valid;
@@ -50,6 +49,7 @@ public class StudentController {
    * @param id 　受講生ID
    * @return　受講生情報
    */
+  @Operation(summary = "受講生検索", description = "IDに紐づく任意の受講生情報を検索します。IDは数値以外入力するとエラーメッセージを返します。")
   @GetMapping("/student/{id}")
   public StudentDetail getStudent(
       @PathVariable @NotBlank @Pattern(regexp = "^\\d+$",message = "IDは数字のみになります。") String id){
@@ -77,6 +77,7 @@ public class StudentController {
    * @param studentDetail　受講生詳細情報
    * @return　実行結果
    */
+  @Operation(summary = "受講生情報の更新", description = "既存の受講生情報を更新、キャンセルフラグの更新を行います。更新が完了した場合、成功メッセージを返します。")
   @PutMapping("/updateStudent")
   public ResponseEntity<String> updateStudent(@RequestBody @Valid StudentDetail studentDetail){
     service.updateStudent(studentDetail);

@@ -19,9 +19,11 @@ import lombok.Setter;
   public class StudentDetail {
 
   @Valid
+  @Schema(description = "受講生の基本情報")
   private Student student;
 
   @Valid
+  @Schema(description = "受講生コース情報")
   private List<StudentCourse> studentCourseList;
 
 }
