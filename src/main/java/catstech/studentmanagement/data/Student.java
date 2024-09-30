@@ -8,12 +8,14 @@ import lombok.Getter;
 import lombok.Setter;
 
 @Schema(description = "受講生")
+
 @Getter
 @Setter
+
 public class Student {
 
   @NotBlank
-  @Pattern(regexp = "^\\d+$")
+  @Pattern(regexp = "^\\d+$", message = "数字のみ入力うるようにして下さい")
   private String id;
 
   @NotBlank

@@ -52,7 +52,7 @@ public class StudentController {
   @Operation(summary = "受講生検索", description = "IDに紐づく任意の受講生情報を検索します。IDは数値以外入力するとエラーメッセージを返します。")
   @GetMapping("/student/{id}")
   public StudentDetail getStudent(
-      @PathVariable @NotBlank @Pattern(regexp = "^\\d+$",message = "IDは数字のみになります。") String id){
+      @PathVariable @NotBlank @Pattern(regexp = "^\\d+$") String id){
 
        return service.searchStudent(id);
   }
