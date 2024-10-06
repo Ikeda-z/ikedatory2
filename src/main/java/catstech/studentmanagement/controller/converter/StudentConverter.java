@@ -23,7 +23,7 @@ public class StudentConverter {
    * @return　受講生詳細情報のリスト
    */
 
-  public static List<StudentDetail> convertStudentDetails(List<Student> studentList,
+  public List<StudentDetail> convertStudentDetails(List<Student> studentList,
       List<StudentCourse> studentCourseList) {
     List<StudentDetail> studentDetails = new ArrayList<>();
     studentList.forEach(student -> {

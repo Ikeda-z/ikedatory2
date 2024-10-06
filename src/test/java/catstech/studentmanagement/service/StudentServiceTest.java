@@ -47,7 +47,7 @@ class StudentServiceTest {
     verify(repository, times(1)).search();
     verify(repository, times(1)).searchStudentCourseList();
     //、↓があるとテストが成功されません。postmanでは全件検索できているので、メソッドは呼び出しできているとおもうのですが、、。少しヒントをいただけないでしょうか。
-    //verify(converter, times(1)).convertStudentDetails(studentList,studentCourseList);
+    verify(converter, times(1)).convertStudentDetails(studentList,studentCourseList);
 
   }
 
