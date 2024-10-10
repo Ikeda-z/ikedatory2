@@ -24,14 +24,14 @@
 
   <!--受講生新規登録-->
   <insert id="registerStudent" parameterType="catstech.studentmanagement.data.Student" useGeneratedKeys="true" keyProperty="id">
-    INSERT INTO students(name,furigana,nickname,mail_Address,address,age,gender,remark,isDeleted)
-    + VALUES(#{name},#{furigana},#{nickname},#{mailAddress},#{address},#{age},#{gender},#{remark},false)
+    INSERT INTO students(name,furigana,nickname,mailAddress,address,age,gender,remark,isDeleted)
+    VALUES(#{name},#{furigana},#{nickname},#{mailAddress},#{address},#{age},#{gender},#{remark},false)
   </insert>
 
   <!--受講生コース登録-->
   <insert id="registerStudentCourse" parameterType="catstech.studentmanagement.data.StudentCourse" useGeneratedKeys="true" keyProperty="id">
     INSERT INTO students_courses(student_id,  course, course_start_date, course_end_date)
-    + VALUES(#{studentId}, #{course}, #{courseStartDate}, #{courseEndDate})
+    VALUES(#{studentId}, #{course}, #{courseStartDate}, #{courseEndDate})
   </insert>
 
   <!--受講生更新-->

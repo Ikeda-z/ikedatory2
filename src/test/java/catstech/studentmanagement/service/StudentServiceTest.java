@@ -81,12 +81,12 @@ class StudentServiceTest {
     studentDetail.getStudentCourseList().add(studentCourse);
 
     doNothing().when(repository).registerStudent(student);
-    doNothing().when(repository).regiserStudentCourse(studentCourse);
+    doNothing().when(repository).registerStudentCourse(studentCourse);
 
     StudentDetail result = sut.registerStudent(studentDetail);
 
     verify(repository, times(1)).registerStudent(student);
-    verify(repository, times(1)).regiserStudentCourse(studentCourse);
+    verify(repository, times(1)).registerStudentCourse(studentCourse);
     assertEquals(studentDetail, result);
 
   }

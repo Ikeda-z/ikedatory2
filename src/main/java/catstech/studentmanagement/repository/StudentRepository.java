@@ -60,7 +60,7 @@ public interface StudentRepository {
    *
    * @param studentCourse　受講生コース情報
    */
-  void regiserStudentCourse(StudentCourse studentCourse);
+  void registerStudentCourse(StudentCourse studentCourse);
 
   /**
    * 受講生を更新します。

@@ -68,7 +68,7 @@ public class StudentService {
     repository.registerStudent(student);
     studentDetail.getStudentCourseList().forEach(studentCourse -> {
       initStudentCourse(studentCourse, student);
-      repository.regiserStudentCourse(studentCourse);
+      repository.registerStudentCourse(studentCourse);
     });
     return studentDetail;
   }
