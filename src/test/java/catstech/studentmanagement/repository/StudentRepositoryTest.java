@@ -81,17 +81,16 @@ class StudentRepositoryTest {
     student.setRemark("new remark");
 
     sut.updateStudent(student);
+    Student actual = sut.searchStudent("1");
 
-    Student updateStudent = sut.searchStudent("1");
-
-    assertThat(updateStudent.getName()).isEqualTo("new name");
-    assertThat(updateStudent.getFurigana()).isEqualTo("new furigana");
-    assertThat(updateStudent.getNickname()).isEqualTo("new nickname");
-    assertThat(updateStudent.getMailAddress()).isEqualTo("new mailAddress");
-    assertThat(updateStudent.getAddress()).isEqualTo("new address");
-    assertThat(updateStudent.getAge()).isEqualTo(25);
-    assertThat(updateStudent.getGender()).isEqualTo("new gender");
-    assertThat(updateStudent.getRemark()).isEqualTo("new remark");
+    assertThat(student.getName()).isEqualTo("new name");
+    assertThat(student.getFurigana()).isEqualTo("new furigana");
+    assertThat(student.getNickname()).isEqualTo("new nickname");
+    assertThat(student.getMailAddress()).isEqualTo("new mailAddress");
+    assertThat(student.getAddress()).isEqualTo("new address");
+    assertThat(student.getAge()).isEqualTo(25);
+    assertThat(student.getGender()).isEqualTo("new gender");
+    assertThat(student.getRemark()).isEqualTo("new remark");
 
   }
   @Test

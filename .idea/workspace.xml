@@ -7,9 +7,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="950778b8-04c8-498c-8387-511766dabe50" name="変更" comment="1">
-      <change afterPath="$PROJECT_DIR$/src/test/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/data.sql" afterDir="false" />
+    <list default="true" id="950778b8-04c8-498c-8387-511766dabe50" name="変更" comment="Repositoryのテスト">
       <change afterPath="$PROJECT_DIR$/src/test/resources/schema.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.8/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.8/checksums/checksums.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.8/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.8/executionHistory/executionHistory.bin" afterDir="false" />
@@ -20,14 +18,8 @@
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/catstech/studentmanagement/repository/StudentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/catstech/studentmanagement/repository/StudentRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/catstech/studentmanagement/service/StudentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/catstech/studentmanagement/service/StudentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/studentRepository.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/studentRepository.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/catstech/studentmanagement/repository/StudentRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/catstech/studentmanagement/repository/StudentRepositoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/catstech/studentmanagement/service/StudentServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/catstech/studentmanagement/service/StudentServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,38 +86,38 @@
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {}
 }</component>
-  <component name="GitHubPullRequestState">{
-  &quot;prStates&quot;: [
+  <component name="GitHubPullRequestState"><![CDATA[{
+  "prStates": [
     {
-      &quot;id&quot;: {
-        &quot;id&quot;: &quot;PR_kwDOMRyidM52wEnh&quot;,
-        &quot;number&quot;: 1
+      "id": {
+        "id": "PR_kwDOMRyidM52wEnh",
+        "number": 1
       },
-      &quot;lastSeen&quot;: 1722435171243
+      "lastSeen": 1722435171243
     },
     {
-      &quot;id&quot;: {
-        &quot;id&quot;: &quot;PR_kwDOMRyidM52wM8R&quot;,
-        &quot;number&quot;: 2
+      "id": {
+        "id": "PR_kwDOMRyidM52wM8R",
+        "number": 2
       },
-      &quot;lastSeen&quot;: 1722443493580
+      "lastSeen": 1722443493580
     },
     {
-      &quot;id&quot;: {
-        &quot;id&quot;: &quot;PR_kwDOMRyidM53JMIe&quot;,
-        &quot;number&quot;: 4
+      "id": {
+        "id": "PR_kwDOMRyidM53JMIe",
+        "number": 4
       },
-      &quot;lastSeen&quot;: 1724117535822
+      "lastSeen": 1724117535822
     },
     {
-      &quot;id&quot;: {
-        &quot;id&quot;: &quot;PR_kwDOMRyidM55be4G&quot;,
-        &quot;number&quot;: 8
+      "id": {
+        "id": "PR_kwDOMRyidM5-MNq9",
+        "number": 13
       },
-      &quot;lastSeen&quot;: 1724724684454
+      "lastSeen": 1728644178184
     }
   ]
-}</component>
+}]]></component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/Ikeda-z/studentmanagement.git&quot;,
@@ -157,43 +149,43 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "Gradle.StudentControllerTest.受講生詳細の一覧検索が実行できて空のリストが返ってくること.executor": "Run",
-    "Gradle.StudentControllerTest.受講生詳細の受講生でIDに数字以外を用いたときに入力チェックがかかること.executor": "Run",
-    "Gradle.StudentControllerTest.受講生詳細の受講生で適切な値を入力した時に入力チェックに以上が発生しないこと.executor": "Run",
-    "Gradle.StudentConverterTest.受講生に受講生コース情報が正しくマッピングされていること.executor": "Run",
-    "Gradle.StudentManagement [:StudentmanagementApplication.main()].executor": "Run",
-    "Gradle.StudentManagement [:catstech.studentmanagement.StudentmanagementApplication.main()].executor": "Run",
-    "Gradle.StudentRepositoryTest.executor": "Run",
-    "Gradle.StudentRepositoryTest.受講生の登録が行えること.executor": "Run",
-    "Gradle.StudentRepositoryTest.受講生コースの登録が行えるこ.executor": "Run",
-    "Gradle.StudentRepositoryTest.受講生コース情報の更新が行われること.executor": "Run",
-    "Gradle.StudentRepositoryTest.受講生情報の更新が行われること.executor": "Run",
-    "Gradle.StudentServiceTest.executor": "Run",
-    "Gradle.StudentServiceTest.受講生詳細の一覧検索機能_全件検索が動作すること.executor": "Debug",
-    "Gradle.studentmanagement [:StudentmanagementApplication.main()].executor": "Run",
-    "Gradle.studentmanagement [:catstech.studentmanagement.StudentmanagementApplication.main()].executor": "Run",
-    "Gradle.studentmanagement [dependencies].executor": "Run",
-    "Gradle.studentmanagement.executor": "Run",
-    "Gradle.ソースのダウンロード.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "Repositoryのテスト",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Owner/IdeaProjects/studentmanagement/src/test/resources",
-    "project.structure.last.edited": "モジュール",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "preferences.externalResources",
-    "アプリケーション.StudentmanagementApplication.executor": "Run"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;Gradle.StudentControllerTest.受講生詳細の一覧検索が実行できて空のリストが返ってくること.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.StudentControllerTest.受講生詳細の受講生でIDに数字以外を用いたときに入力チェックがかかること.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.StudentControllerTest.受講生詳細の受講生で適切な値を入力した時に入力チェックに以上が発生しないこと.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.StudentConverterTest.受講生に受講生コース情報が正しくマッピングされていること.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.StudentManagement [:StudentmanagementApplication.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.StudentManagement [:catstech.studentmanagement.StudentmanagementApplication.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.StudentRepositoryTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.StudentRepositoryTest.受講生の登録が行えること.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.StudentRepositoryTest.受講生コースの登録が行えるこ.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.StudentRepositoryTest.受講生コース情報の更新が行われること.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.StudentRepositoryTest.受講生情報の更新が行われること.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.StudentServiceTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.StudentServiceTest.受講生詳細の一覧検索機能_全件検索が動作すること.executor&quot;: &quot;Debug&quot;,
+    &quot;Gradle.studentmanagement [:StudentmanagementApplication.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.studentmanagement [:catstech.studentmanagement.StudentmanagementApplication.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.studentmanagement [dependencies].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.studentmanagement.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ソースのダウンロード.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Repositoryのテスト&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Owner/IdeaProjects/studentmanagement/src/test/resources&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;モジュール&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.externalResources&quot;,
+    &quot;アプリケーション.StudentmanagementApplication.executor&quot;: &quot;Run&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="catstech.studentmanagement.service" />
@@ -436,17 +428,11 @@
       <item itemvalue="Gradle.studentmanagement" />
       <item itemvalue="Gradle.StudentRepositoryTest" />
       <item itemvalue="Gradle.StudentRepositoryTest.受講生の登録が行えること" />
-      <item itemvalue="Gradle.StudentRepositoryTest.受講生コースの登録が行えるこ" />
-      <item itemvalue="Gradle.StudentRepositoryTest.受講生コース情報の更新が行われること" />
-      <item itemvalue="Gradle.StudentRepositoryTest.受講生情報の更新が行われること" />
       <item itemvalue="アプリケーション.名前未設定" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.StudentRepositoryTest" />
-        <item itemvalue="Gradle.StudentRepositoryTest.受講生コース情報の更新が行われること" />
-        <item itemvalue="Gradle.StudentRepositoryTest.受講生情報の更新が行われること" />
-        <item itemvalue="Gradle.StudentRepositoryTest.受講生コースの登録が行えるこ" />
         <item itemvalue="Gradle.StudentRepositoryTest.受講生の登録が行えること" />
       </list>
     </recent_temporary>
@@ -663,7 +649,15 @@
       <option name="project" value="LOCAL" />
       <updated>1727868560552</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Repositoryのテスト">
+      <option name="closed" value="true" />
+      <created>1728552020533</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1728552020533</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -689,6 +683,7 @@
     <MESSAGE value="Thymeleafを使ったPOST処理" />
     <MESSAGE value="新規受講生登録" />
     <MESSAGE value="1" />
-    <option name="LAST_COMMIT_MESSAGE" value="1" />
+    <MESSAGE value="Repositoryのテスト" />
+    <option name="LAST_COMMIT_MESSAGE" value="Repositoryのテスト" />
   </component>
 </project>
