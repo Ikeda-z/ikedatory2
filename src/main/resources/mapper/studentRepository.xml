@@ -12,14 +12,36 @@
     SELECT * FROM students WHERE id = #{id}
   </select>
 
+
+
+  <select id="searchFilteredStudent"  resultType="catstech.studentmanagement.data.Student">
+    SELECT * FROM students
+    WHERE 1=1
+    <if test="name != null and name != ''">
+      AND name LIKE CONCAT('%', #{name}, '%')
+    </if>
+    <if test="mailAddress != null and mailAddress != ''">
+      AND mailAddress LIKE CONCAT('%', #{mailAddress}, '%')
+    </if>
+    <if test="age != null">
+      AND age = #{age}
+    </if>
+  </select>
+
   <!--受講生コースの検索-->
   <select id="searchStudentCourseList" resultType="catstech.studentmanagement.data.StudentCourse">
     SELECT * FROM students_courses
   </select>
 
+
   <!--受講生IDに紐づく受講生コースの検索-->
   <select id="searchStudentsCourses" resultType="catstech.studentmanagement.data.StudentCourse">
     SELECT * FROM students_courses WHERE student_id = #{studentId}
+  </select>
+
+  <!--受講生コース受講状況の検索-->
+  <select id="searchStudentCourseStatusList" resultType="catstech.studentmanagement.data.StudentCourseStatus">
+    SELECT * FROM students_courses_status
   </select>
 
   <!--受講生新規登録-->
@@ -30,8 +52,8 @@
 
   <!--受講生コース登録-->
   <insert id="registerStudentCourse" parameterType="catstech.studentmanagement.data.StudentCourse" useGeneratedKeys="true" keyProperty="id">
-    INSERT INTO students_courses(student_id,  course, course_start_date, course_end_date)
-    VALUES(#{studentId}, #{course}, #{courseStartDate}, #{courseEndDate})
+    INSERT INTO students_courses(student_id, course_id, course, course_start_date, course_end_date)
+    VALUES(#{studentId}, #{courseId}, #{course}, #{courseStartDate}, #{courseEndDate})
   </insert>
 
   <!--受講生更新-->
@@ -43,4 +65,6 @@
   <update id="updateStudentCourse" parameterType="catstech.studentmanagement.data.StudentCourse">
     UPDATE students_courses SET course = #{course} WHERE id = #{id}
   </update>
+
+
 </mapper>

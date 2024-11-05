@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -40,8 +41,8 @@ public class StudentController {
   @Operation(summary = "一覧検索", description = "受講生の一覧を検索します")
   @GetMapping("/studentList")
   public List<StudentDetail> getStudentList() {
-   return service.searchStudentList();
-    }
+    return service.searchStudentList();
+  }
 
   /**
    * 受講生検索です。 IDに紐づく任意の受講生情報を取得します。
@@ -52,37 +53,55 @@ public class StudentController {
   @Operation(summary = "受講生検索", description = "IDに紐づく任意の受講生情報を検索します。IDは数値以外入力するとエラーメッセージを返します。")
   @GetMapping("/student/{id}")
   public StudentDetail getStudent(
-      @PathVariable @NotBlank @Pattern(regexp = "^\\d+$") String id){
+      @PathVariable @NotBlank @Pattern(regexp = "^\\d+$") String id) {
 
-       return service.searchStudent(id);
+    return service.searchStudent(id);
   }
+
+  /**
+   * 受講生条件検索です。名前、年齢、メールアドレス（少なくとも一つ）で検索し、該当する受験生情報を返します。
+   *
+   * @param name        　名前
+   * @param mailAddress 　メールアドレス
+   * @param age         　年齢
+   * @return　該当した受験生情報
+   */
+  @GetMapping("/students")
+  public List<StudentDetail> filteredStudentList(
+      @RequestParam(required = false) String name,
+      @RequestParam(required = false) String mailAddress,
+      @RequestParam(required = false) Integer age) {
+
+    return service.searchStudentsList(name, mailAddress, age);
+  }
+
   /**
    * 受講生の新規登録を行います。
    *
-   * @param studentDetail　受講生詳細
+   * @param studentDetail 　受講生詳細
    * @return　実行結果
    */
   @Operation(summary = "受講生登録", description = "受講生を登録します")
   @PostMapping("/registerStudent")
   public ResponseEntity<StudentDetail> registerStudent(
-      @RequestBody @Valid StudentDetail studentDetail){
+      @RequestBody @Valid StudentDetail studentDetail) {
     StudentDetail responseStudentDetail = service.registerStudent(studentDetail);
     return ResponseEntity.ok(responseStudentDetail);
   }
 
   /**
-   * 受講生詳細の更新を行います。
-   * キャンセルフラグの更新もここで行います(論理削除)
+   * 受講生詳細の更新を行います。 キャンセルフラグの更新もここで行います(論理削除)
    *
-   * @param studentDetail　受講生詳細情報
+   * @param studentDetail 　受講生詳細情報
    * @return　実行結果
    */
   @Operation(summary = "受講生情報の更新", description = "既存の受講生情報を更新、キャンセルフラグの更新を行います。更新が完了した場合、成功メッセージを返します。")
   @PutMapping("/updateStudent")
-  public ResponseEntity<String> updateStudent(@RequestBody @Valid StudentDetail studentDetail){
+  public ResponseEntity<String> updateStudent(@RequestBody @Valid StudentDetail studentDetail) {
     service.updateStudent(studentDetail);
-  return ResponseEntity.ok("更新処理が完了しました");
+    return ResponseEntity.ok("更新処理が完了しました");
   }
 
-
 }
+
+

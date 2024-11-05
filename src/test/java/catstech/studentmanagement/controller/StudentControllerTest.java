@@ -10,6 +10,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.put;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 import catstech.studentmanagement.data.Student;
 import catstech.studentmanagement.domain.StudentDetail;
@@ -146,4 +147,17 @@ class StudentControllerTest {
 
     verify(service, times(1)).updateStudent(any(StudentDetail.class));
   }
+  @Test
+  public void testGetFilteredStudentList() throws Exception {
+    mockMvc.perform(get("/students")
+            .param("name", "John")
+            .param("mailAddress", "john@example.com")
+            .param("age", "25"))
+        .andExpect(status().isOk())
+        .andExpect(jsonPath("$[0].name").value("John"))
+        .andExpect(jsonPath("$[0].mailAddress").value("john@example.com"))
+        .andExpect(jsonPath("$[0].age").value(25));
+  }
+
+
 }

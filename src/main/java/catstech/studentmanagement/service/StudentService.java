@@ -3,11 +3,12 @@ package catstech.studentmanagement.service;
 import catstech.studentmanagement.controller.converter.StudentConverter;
 import catstech.studentmanagement.data.Student;
 import catstech.studentmanagement.data.StudentCourse;
+import catstech.studentmanagement.data.StudentCourseStatus;
 import catstech.studentmanagement.domain.StudentDetail;
 import catstech.studentmanagement.repository.StudentRepository;
 import java.time.LocalDateTime;
 import java.util.List;
-
+import java.util.stream.Collectors;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -38,21 +39,65 @@ public class StudentService {
   public List<StudentDetail> searchStudentList() {
     List<Student> studentList = repository.search();
     List<StudentCourse> studentCourseList = repository.searchStudentCourseList();
+    List<StudentCourseStatus> studentCourseStatusList = repository.searchStudentCourseStatusList();
+
+    for (StudentCourse course : studentCourseList) {
+      List<StudentCourseStatus> statuses = studentCourseStatusList.stream()
+          .filter(status -> status.getId().equals(course.getCourseId()))
+          .collect(Collectors.toList());
+      course.setStudentCourseStatus(statuses);
+    }
+
     return converter.convertStudentDetails(studentList, studentCourseList);
   }
-
   /**
-   * 受講生詳細の検索です。
-   * IDに紐づく受講生情報を取得したあと、その受講生に紐づく受講生コース情報を取得して設定します。
+   * 受講生詳細情報検索（ID）です。
    *
-   * @param id　受講生ID
    * @return　受講生詳細
    */
   public StudentDetail searchStudent(String id){
     Student student = repository.searchStudent(id);
-    List<StudentCourse> studentCourse = repository.searchStudentsCourses(student.getId());
-    return new StudentDetail(student, studentCourse);
+    List<StudentCourse> studentCourses = repository.searchStudentsCourses(student.getId());
+    List<StudentCourseStatus> studentCourseStatusList = repository.searchStudentCourseStatusList();
+    for (StudentCourse course : studentCourses) {
+      List<StudentCourseStatus> statuses = studentCourseStatusList.stream()
+          .filter(status -> status.getId().equals(course.getCourseId()))
+          .collect(Collectors.toList());
+      course.setStudentCourseStatus(statuses);
+    }
+      // 受講生詳細情報に変換して返す
+      return new StudentDetail(student, studentCourses);
+    }
+
+  /**
+   * 受講生詳細情報検索（名前、年齢、メールアドレス）です。
+   *
+   * @return
+   */
+  public List<StudentDetail> searchStudentsList(String name, String mailAddress, Integer age) {
+    List<Student> studentList = repository.searchFilteredStudent(name, mailAddress, age);
+    List<StudentCourse> studentCourseList = repository.searchStudentCourseList();
+    List<StudentCourseStatus> studentCourseStatusList = repository.searchStudentCourseStatusList();
+    for (StudentCourse course : studentCourseList) {
+      List<StudentCourseStatus> statuses = studentCourseStatusList.stream()
+          .filter(status -> status.getId().equals(course.getCourseId()))
+          .collect(Collectors.toList());
+      course.setStudentCourseStatus(statuses);
+    }
+
+    List<StudentDetail> studentDetails = studentList.stream()
+        .map(student -> {
+          List<StudentCourse> coursesForStudent = studentCourseList.stream()
+              .filter(course -> course.getStudentId().equals(student.getId()))
+              .collect(Collectors.toList());
+
+          return new StudentDetail(student, coursesForStudent);
+        })
+        .collect(Collectors.toList());
+
+    return studentDetails;
   }
+
 
   /**
    * 受講生の新規登録を行います。
@@ -99,6 +144,9 @@ public class StudentService {
     studentDetail.getStudentCourseList()
         .forEach(studentCourse -> repository.updateStudentCourse(studentCourse));
   }
+
+
+
 }
 
 

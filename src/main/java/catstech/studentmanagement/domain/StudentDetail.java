@@ -2,6 +2,7 @@ package catstech.studentmanagement.domain;
 
 import catstech.studentmanagement.data.Student;
 import catstech.studentmanagement.data.StudentCourse;
+import catstech.studentmanagement.data.StudentCourseStatus;
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.Valid;
 import java.util.List;
@@ -25,6 +26,7 @@ import lombok.Setter;
   @Valid
   @Schema(description = "受講生コース情報")
   private List<StudentCourse> studentCourseList;
+
 
 }
 

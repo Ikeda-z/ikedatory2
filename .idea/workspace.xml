@@ -8,7 +8,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="950778b8-04c8-498c-8387-511766dabe50" name="変更" comment="Repositoryのテスト">
-      <change afterPath="$PROJECT_DIR$/src/test/resources/schema.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/catstech/studentmanagement/data/StudentCourseStatus.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.8/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.8/checksums/checksums.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.8/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.8/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.8/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.8/executionHistory/executionHistory.lock" afterDir="false" />
@@ -19,7 +19,16 @@
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/catstech/studentmanagement/repository/StudentRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/catstech/studentmanagement/repository/StudentRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/catstech/studentmanagement/controller/StudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/catstech/studentmanagement/controller/StudentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/catstech/studentmanagement/controller/converter/StudentConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/catstech/studentmanagement/controller/converter/StudentConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/catstech/studentmanagement/data/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/catstech/studentmanagement/data/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/catstech/studentmanagement/data/StudentCourse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/catstech/studentmanagement/data/StudentCourse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/catstech/studentmanagement/domain/StudentDetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/catstech/studentmanagement/domain/StudentDetail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/catstech/studentmanagement/repository/StudentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/catstech/studentmanagement/repository/StudentRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/catstech/studentmanagement/service/StudentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/catstech/studentmanagement/service/StudentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/studentRepository.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/studentRepository.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/catstech/studentmanagement/controller/StudentControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/catstech/studentmanagement/controller/StudentControllerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,8 +66,8 @@
         <option value="Interface" />
         <option value="HTML File" />
         <option value="package-info" />
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -86,38 +95,31 @@
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {}
 }</component>
-  <component name="GitHubPullRequestState"><![CDATA[{
-  "prStates": [
+  <component name="GitHubPullRequestState">{
+  &quot;prStates&quot;: [
     {
-      "id": {
-        "id": "PR_kwDOMRyidM52wEnh",
-        "number": 1
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMRyidM52wEnh&quot;,
+        &quot;number&quot;: 1
       },
-      "lastSeen": 1722435171243
+      &quot;lastSeen&quot;: 1722435171243
     },
     {
-      "id": {
-        "id": "PR_kwDOMRyidM52wM8R",
-        "number": 2
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMRyidM52wM8R&quot;,
+        &quot;number&quot;: 2
       },
-      "lastSeen": 1722443493580
+      &quot;lastSeen&quot;: 1722443493580
     },
     {
-      "id": {
-        "id": "PR_kwDOMRyidM53JMIe",
-        "number": 4
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMRyidM53JMIe&quot;,
+        &quot;number&quot;: 4
       },
-      "lastSeen": 1724117535822
-    },
-    {
-      "id": {
-        "id": "PR_kwDOMRyidM5-MNq9",
-        "number": 13
-      },
-      "lastSeen": 1728644178184
+      &quot;lastSeen&quot;: 1724117535822
     }
   ]
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/Ikeda-z/studentmanagement.git&quot;,
@@ -174,7 +176,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Repositoryのテスト&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;検索条件の追加と申込み状況機能の追加&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/Owner/IdeaProjects/studentmanagement/src/test/resources&quot;,
@@ -202,7 +204,7 @@
       <recent name="catstech.studentmanagement.service" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.StudentRepositoryTest">
+  <component name="RunManager" selected="アプリケーション.名前未設定">
     <configuration name="名前未設定" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="21" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />

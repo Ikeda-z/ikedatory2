@@ -2,12 +2,9 @@ package catstech.studentmanagement.repository;
 
 import catstech.studentmanagement.data.Student;
 import catstech.studentmanagement.data.StudentCourse;
+import catstech.studentmanagement.data.StudentCourseStatus;
 import java.util.List;
-import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Options;
-import org.apache.ibatis.annotations.Select;
-import org.apache.ibatis.annotations.Update;
 
 /**
  * 受講生テーブルと受講生コーステーブルと紐づくRepositoryです。
@@ -31,13 +28,24 @@ public interface StudentRepository {
    */
   Student searchStudent(String id);
 
+
+  /**
+   * 受講生条件検索を行います。
+   *
+   * @param name　名前
+   * @param mailAddress　メールアドレス
+   * @param age　年齢
+   * @return　該当した受講生詳細情報
+   */
+  List<Student> searchFilteredStudent(String name,String mailAddress,Integer age);
+
+
   /**
    *  受講生のコース情報の全件検索を行います。
    *
    * @return　受講生のコース情報(全件)
    */
   List<StudentCourse> searchStudentCourseList();
-
   /**
    * 受講生IDに紐づく受講生コース情報を検索します。
    *
@@ -45,6 +53,15 @@ public interface StudentRepository {
    * @return　受講生IDに紐づく受講生コース情報
    */
   List <StudentCourse> searchStudentsCourses(String studentId);
+
+  /**
+   * 受講生のコース受講状況の全件検索を行います。
+   * 　
+   * @return　受講生のコース受講状況(全件)
+   */
+
+  List<StudentCourseStatus> searchStudentCourseStatusList();
+
 
   /**
    * 受講生を新規登録します。

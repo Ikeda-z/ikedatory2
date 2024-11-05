@@ -1,6 +1,7 @@
 package catstech.studentmanagement.data;
 
 import io.swagger.v3.oas.annotations.media.Schema;
+import jakarta.validation.Valid;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;
@@ -12,9 +13,10 @@ import lombok.Setter;
 @Getter
 @Setter
 
+
 public class Student {
 
-
+@Valid
   @Pattern(regexp = "^\\d+$", message = "数字のみ入力うるようにして下さい")
   private String id;
 
@@ -27,7 +29,7 @@ public class Student {
   @NotBlank
   private String nickname;
 
-  @NotBlank
+
   @Email
   private String mailAddress;
 
