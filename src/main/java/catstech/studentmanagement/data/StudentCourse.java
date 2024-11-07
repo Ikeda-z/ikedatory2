@@ -25,7 +25,7 @@ public class StudentCourse {
   private String studentId;
 
   @Pattern(regexp = "^\\d+$")
-  private String courseId;
+  private String statusId;
 
   @NotBlank
   private String course;

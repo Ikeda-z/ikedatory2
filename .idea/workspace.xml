@@ -7,8 +7,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="950778b8-04c8-498c-8387-511766dabe50" name="変更" comment="Repositoryのテスト">
-      <change afterPath="$PROJECT_DIR$/src/main/java/catstech/studentmanagement/data/StudentCourseStatus.java" afterDir="false" />
+    <list default="true" id="950778b8-04c8-498c-8387-511766dabe50" name="変更" comment="検索条件の追加と申し込み状況機能の追加">
       <change beforePath="$PROJECT_DIR$/.gradle/8.8/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.8/checksums/checksums.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.8/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.8/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.8/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.8/executionHistory/executionHistory.lock" afterDir="false" />
@@ -22,13 +21,10 @@
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/catstech/studentmanagement/controller/StudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/catstech/studentmanagement/controller/StudentController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/catstech/studentmanagement/controller/converter/StudentConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/catstech/studentmanagement/controller/converter/StudentConverter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/catstech/studentmanagement/data/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/catstech/studentmanagement/data/Student.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/catstech/studentmanagement/data/StudentCourse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/catstech/studentmanagement/data/StudentCourse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/catstech/studentmanagement/domain/StudentDetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/catstech/studentmanagement/domain/StudentDetail.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/catstech/studentmanagement/repository/StudentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/catstech/studentmanagement/repository/StudentRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/catstech/studentmanagement/service/StudentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/catstech/studentmanagement/service/StudentService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/studentRepository.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/studentRepository.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/catstech/studentmanagement/controller/StudentControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/catstech/studentmanagement/controller/StudentControllerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,31 +91,38 @@
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {}
 }</component>
-  <component name="GitHubPullRequestState">{
-  &quot;prStates&quot;: [
+  <component name="GitHubPullRequestState"><![CDATA[{
+  "prStates": [
     {
-      &quot;id&quot;: {
-        &quot;id&quot;: &quot;PR_kwDOMRyidM52wEnh&quot;,
-        &quot;number&quot;: 1
+      "id": {
+        "id": "PR_kwDOMRyidM52wEnh",
+        "number": 1
       },
-      &quot;lastSeen&quot;: 1722435171243
+      "lastSeen": 1722435171243
     },
     {
-      &quot;id&quot;: {
-        &quot;id&quot;: &quot;PR_kwDOMRyidM52wM8R&quot;,
-        &quot;number&quot;: 2
+      "id": {
+        "id": "PR_kwDOMRyidM52wM8R",
+        "number": 2
       },
-      &quot;lastSeen&quot;: 1722443493580
+      "lastSeen": 1722443493580
     },
     {
-      &quot;id&quot;: {
-        &quot;id&quot;: &quot;PR_kwDOMRyidM53JMIe&quot;,
-        &quot;number&quot;: 4
+      "id": {
+        "id": "PR_kwDOMRyidM53JMIe",
+        "number": 4
       },
-      &quot;lastSeen&quot;: 1724117535822
+      "lastSeen": 1724117535822
+    },
+    {
+      "id": {
+        "id": "PR_kwDOMRyidM6A5tmu",
+        "number": 14
+      },
+      "lastSeen": 1731011695016
     }
   ]
-}</component>
+}]]></component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/Ikeda-z/studentmanagement.git&quot;,
@@ -659,7 +662,15 @@
       <option name="project" value="LOCAL" />
       <updated>1728552020533</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="検索条件の追加と申し込み状況機能の追加">
+      <option name="closed" value="true" />
+      <created>1730796927260</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1730796927260</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -686,6 +697,7 @@
     <MESSAGE value="新規受講生登録" />
     <MESSAGE value="1" />
     <MESSAGE value="Repositoryのテスト" />
-    <option name="LAST_COMMIT_MESSAGE" value="Repositoryのテスト" />
+    <MESSAGE value="検索条件の追加と申し込み状況機能の追加" />
+    <option name="LAST_COMMIT_MESSAGE" value="検索条件の追加と申し込み状況機能の追加" />
   </component>
 </project>

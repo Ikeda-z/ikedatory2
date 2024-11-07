@@ -26,6 +26,9 @@
     <if test="age != null">
       AND age = #{age}
     </if>
+    <if test="address != null and address != ''">
+      AND address LIKE CONCAT('%', #{address}, '%')
+    </if>
   </select>
 
   <!--受講生コースの検索-->

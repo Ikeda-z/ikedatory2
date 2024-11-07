@@ -9,6 +9,7 @@ import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -60,19 +61,33 @@ public class StudentController {
 
   /**
    * 受講生条件検索です。名前、年齢、メールアドレス（少なくとも一つ）で検索し、該当する受験生情報を返します。
+   * 検索条件がすべてNULLの場合は受講生一覧を返します。
+   * 該当する受講生が見つからなかったらメッセージを返します。
    *
    * @param name        　名前
    * @param mailAddress 　メールアドレス
    * @param age         　年齢
+   * @param address       住所
    * @return　該当した受験生情報
    */
   @GetMapping("/students")
-  public List<StudentDetail> filteredStudentList(
-      @RequestParam(required = false) String name,
-      @RequestParam(required = false) String mailAddress,
-      @RequestParam(required = false) Integer age) {
+  public ResponseEntity<Object> filteredStudentList(
+  @RequestParam(required = false) String name,
+  @RequestParam(required = false) String mailAddress,
+  @RequestParam(required = false) Integer age,
+  @RequestParam(required = false) String address){
 
-    return service.searchStudentsList(name, mailAddress, age);
+    List<StudentDetail> students;
+    if (name == null && mailAddress == null && age == null && address == null) {
+      students = service.searchStudentList();
+    } else
+      students = service.searchStudentsList(name, mailAddress, age, address);
+
+    if (students.isEmpty()) {
+      return ResponseEntity.status(HttpStatus.NOT_FOUND)
+          .body("該当する生徒が見つかりませんでした");
+    }
+    return ResponseEntity.ok(students);
   }
 
   /**
@@ -101,7 +116,6 @@ public class StudentController {
     service.updateStudent(studentDetail);
     return ResponseEntity.ok("更新処理が完了しました");
   }
-
 }
 
 

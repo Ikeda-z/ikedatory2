@@ -37,7 +37,7 @@ public interface StudentRepository {
    * @param age　年齢
    * @return　該当した受講生詳細情報
    */
-  List<Student> searchFilteredStudent(String name,String mailAddress,Integer age);
+  List<Student> searchFilteredStudent(String name,String mailAddress,Integer age ,String address);
 
 
   /**

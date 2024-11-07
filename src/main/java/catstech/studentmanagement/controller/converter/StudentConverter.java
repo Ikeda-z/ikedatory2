@@ -24,32 +24,6 @@ public class StudentConverter {
    * @return　受講生詳細情報のリスト
    */
 
-//  public List<StudentDetail> convertStudentDetails(List<Student> studentList,
-//      List<StudentCourse> studentCourseList, List<StudentCourseStatus> studentCourseStatusList) {
-//    List<StudentDetail> studentDetails = new ArrayList<>();
-//    studentList.forEach(student -> {
-//      StudentDetail studentDetail = new StudentDetail();
-//      studentDetail.setStudent(student);
-//
-//      List<StudentCourse> convertStudentCourseList = studentCourseList.stream()
-//          .filter(studentCourse -> student.getId().equals(studentCourse.getStudentId()))
-//          .map(studentCourse -> {
-//            StudentCourseStatus status = studentCourseStatusList.stream()
-//                .filter(courseStatus -> courseStatus.getId() == studentCourse.getId())
-//                .findFirst()
-//                .orElse(null);
-//            if (status != null) {
-//            studentCourse.setStatus(status);
-//            }
-//            return studentCourse;
-//          })
-//          .collect(Collectors.toList());
-//
-//
-//      studentDetail.setStudentCourseList(convertStudentCourseList);
-//      studentDetails.add(studentDetail);
-//    });
-//    return studentDetails;
   public List<StudentDetail> convertStudentDetails(List<Student> studentList,
       List<StudentCourse> studentCourseList) {
     List<StudentDetail> studentDetails = new ArrayList<>();

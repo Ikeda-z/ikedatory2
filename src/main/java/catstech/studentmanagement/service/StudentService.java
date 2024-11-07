@@ -43,7 +43,7 @@ public class StudentService {
 
     for (StudentCourse course : studentCourseList) {
       List<StudentCourseStatus> statuses = studentCourseStatusList.stream()
-          .filter(status -> status.getId().equals(course.getCourseId()))
+          .filter(status -> status.getId().equals(course.getStatusId()))
           .collect(Collectors.toList());
       course.setStudentCourseStatus(statuses);
     }
@@ -61,7 +61,7 @@ public class StudentService {
     List<StudentCourseStatus> studentCourseStatusList = repository.searchStudentCourseStatusList();
     for (StudentCourse course : studentCourses) {
       List<StudentCourseStatus> statuses = studentCourseStatusList.stream()
-          .filter(status -> status.getId().equals(course.getCourseId()))
+          .filter(status -> status.getId().equals(course.getStatusId()))
           .collect(Collectors.toList());
       course.setStudentCourseStatus(statuses);
     }
@@ -74,13 +74,13 @@ public class StudentService {
    *
    * @return
    */
-  public List<StudentDetail> searchStudentsList(String name, String mailAddress, Integer age) {
-    List<Student> studentList = repository.searchFilteredStudent(name, mailAddress, age);
+  public List<StudentDetail> searchStudentsList(String name, String mailAddress, Integer age ,String address) {
+    List<Student> studentList = repository.searchFilteredStudent(name, mailAddress, age ,address);
     List<StudentCourse> studentCourseList = repository.searchStudentCourseList();
     List<StudentCourseStatus> studentCourseStatusList = repository.searchStudentCourseStatusList();
     for (StudentCourse course : studentCourseList) {
       List<StudentCourseStatus> statuses = studentCourseStatusList.stream()
-          .filter(status -> status.getId().equals(course.getCourseId()))
+          .filter(status -> status.getId().equals(course.getStatusId()))
           .collect(Collectors.toList());
       course.setStudentCourseStatus(statuses);
     }
@@ -144,9 +144,6 @@ public class StudentService {
     studentDetail.getStudentCourseList()
         .forEach(studentCourse -> repository.updateStudentCourse(studentCourse));
   }
-
-
-
 }
 
 
