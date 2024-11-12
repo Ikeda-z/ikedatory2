@@ -9,7 +9,7 @@ import lombok.Setter;
 
 public class StudentCourseStatus {
 
-  private String Id;
+  private String id;
   private String status;
 
 }

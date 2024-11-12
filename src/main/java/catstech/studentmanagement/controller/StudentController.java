@@ -72,10 +72,10 @@ public class StudentController {
    */
   @GetMapping("/students")
   public ResponseEntity<Object> filteredStudentList(
-  @RequestParam(required = false) String name,
-  @RequestParam(required = false) String mailAddress,
-  @RequestParam(required = false) Integer age,
-  @RequestParam(required = false) String address){
+      @RequestParam(required = false) String name,
+      @RequestParam(required = false) String mailAddress,
+      @RequestParam(required = false) Integer age,
+      @RequestParam(required = false) String address){
 
     List<StudentDetail> students;
     if (name == null && mailAddress == null && age == null && address == null) {
