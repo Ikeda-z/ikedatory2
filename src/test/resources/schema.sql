@@ -16,7 +16,14 @@ CREATE TABLE IF NOT EXISTS students_courses
 (
 id INT AUTO_INCREMENT PRIMARY KEY,
 student_id INT NOT NULL,
+status_id INT NOT NULL,
 course VARCHAR(100) NOT NULL,
 course_start_date TIMESTAMP,
 course_end_date TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS students_courses_status
+(
+id INT AUTO_INCREMENT PRIMARY KEY,
+status VARCHAR(10) NOT NULL
 );
