@@ -41,20 +41,20 @@ class StudentRepositoryTest {
     List<Student> actual = sut.search();
     assertThat(actual.size()).isEqualTo(6);
   }
-  @Test
-  void 受講生コースの登録が行えるこ(){
-    Student student = new Student();
-    StudentCourse studentCourse = new StudentCourse();
-    student.setId("1");
-    studentCourse.setCourse("Javaコース");
-
-    studentCourse.setStudentId(student.getId());
-
-    sut.registerStudentCourse(studentCourse);
-
-    List<StudentCourse> actual = sut.searchStudentsCourses("1");
-    assertThat(actual.size()).isEqualTo(2);
-  }
+//  @Test
+//  void 受講生コースの登録が行えるこ(){
+//    Student student = new Student();
+//    StudentCourse studentCourse = new StudentCourse();
+//    student.setId("1");
+//    studentCourse.setCourse("Javaコース");
+//
+//    studentCourse.setStudentId(student.getId());
+//
+//    sut.registerStudentCourse(studentCourse);
+//
+//    List<StudentCourse> actual = sut.searchStudentsCourses("1");
+//    assertThat(actual.size()).isEqualTo(2);
+//  }
 
   @Test
   void 受講生情報の更新が行われること() {

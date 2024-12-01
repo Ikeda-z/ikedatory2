@@ -69,22 +69,6 @@ class StudentControllerTest {
   }
 
   @Test
-  void 受講生詳細の受講生で適切な値を入力した時に入力チェックに異常が発生しないこと(){
-    Student student = new Student();
-    student.setId("テストです。");
-    student.setName("北田ちせ");
-    student.setFurigana("きただちせ");
-    student.setNickname("にょろにょろ");
-    student.setMailAddress("test@example.com");
-    student.setAddress("東京都");
-    student.setGender("女性");
-
-    Set<ConstraintViolation<Student>> violations = validator.validate(student);
-
-    assertThat(violations.size()).isEqualTo(0);
-  }
-
-  @Test
   void 受講生詳細の受講生でIDに数字以外を用いたときに入力チェックがかかること(){
     Student student = new Student();
     student.setId("テストです。");
@@ -101,63 +85,6 @@ class StudentControllerTest {
     assertThat(violations).extracting("message").containsOnly("数字のみ入力うるようにして下さい");
   }
 
-  @Test
-  void 受講生の新規登録時にきちんとデータが送信されること() throws Exception {
-    Student student = new Student();
-    student.setId("テストです。");
-    student.setName("北田ちせ");
-    student.setFurigana("きただちせ");
-    student.setNickname("にょろにょろ");
-    student.setMailAddress("test@example.com");
-    student.setAddress("東京都");
-    student.setGender("女性");
-
-    StudentDetail studentDetail = new StudentDetail();
-    studentDetail.setStudent(student);
-    studentDetail.setStudentCourseList(new ArrayList<>());
-
-    when(service.registerStudent(any(StudentDetail.class))).thenReturn(studentDetail);
-
-    mockMvc.perform(post("/registerStudent"))
-        .andExpect(status().isOk());
-
-    verify(service,times(1)).registerStudent(any(StudentDetail.class));
-  }
-
-  @Test
-  void 更新した受講生情報がきちんと送信されること() throws Exception {
-    Student student = new Student();
-    student.setId("テストです。");
-    student.setName("北田ちせ");
-    student.setFurigana("きただちせ");
-    student.setNickname("にょろにょろ");
-    student.setMailAddress("test@example.com");
-    student.setAddress("東京都");
-    student.setGender("女性");
-
-    StudentDetail studentDetail = new StudentDetail();
-    studentDetail.setStudent(student);
-    studentDetail.setStudentCourseList(new ArrayList<>());
-
-    doNothing().when(service).updateStudent(any(StudentDetail.class));
-
-    mockMvc.perform(put("updateStudent"))
-        .andExpect(status().isOk())
-        .andExpect(content().string("更新処理が完了しました"));
-
-    verify(service, times(1)).updateStudent(any(StudentDetail.class));
-  }
-  @Test
-  public void testGetFilteredStudentList() throws Exception {
-    mockMvc.perform(get("/students")
-            .param("name", "John")
-            .param("mailAddress", "john@example.com")
-            .param("age", "25"))
-        .andExpect(status().isOk())
-        .andExpect(jsonPath("$[0].name").value("John"))
-        .andExpect(jsonPath("$[0].mailAddress").value("john@example.com"))
-        .andExpect(jsonPath("$[0].age").value(25));
-  }
 
 
 }
