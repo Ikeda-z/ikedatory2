@@ -16,9 +16,6 @@
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/catstech/studentmanagement/controller/StudentControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/catstech/studentmanagement/controller/StudentControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/catstech/studentmanagement/controller/converter/StudentConverterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/catstech/studentmanagement/controller/converter/StudentConverterTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/catstech/studentmanagement/repository/StudentRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/catstech/studentmanagement/repository/StudentRepositoryTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -148,45 +145,44 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "Gradle.StudentControllerTest.executor": "Run",
-    "Gradle.StudentControllerTest.受講生詳細の一覧検索が実行できて空のリストが返ってくること.executor": "Run",
-    "Gradle.StudentControllerTest.受講生詳細の受講生でIDに数字以外を用いたときに入力チェックがかかること.executor": "Run",
-    "Gradle.StudentControllerTest.受講生詳細の受講生で適切な値を入力した時に入力チェックに以上が発生しないこと.executor": "Run",
-    "Gradle.StudentConverterTest.executor": "Run",
-    "Gradle.StudentConverterTest.受講生に受講生コース情報が正しくマッピングされていること.executor": "Run",
-    "Gradle.StudentManagement [:StudentmanagementApplication.main()].executor": "Run",
-    "Gradle.StudentManagement [:catstech.studentmanagement.StudentmanagementApplication.main()].executor": "Run",
-    "Gradle.StudentRepositoryTest.executor": "Run",
-    "Gradle.StudentRepositoryTest.受講生の登録が行えること.executor": "Run",
-    "Gradle.StudentRepositoryTest.受講生コースの登録が行えるこ.executor": "Run",
-    "Gradle.StudentRepositoryTest.受講生コース情報の更新が行われること.executor": "Run",
-    "Gradle.StudentRepositoryTest.受講生情報の更新が行われること.executor": "Run",
-    "Gradle.StudentServiceTest.executor": "Run",
-    "Gradle.StudentServiceTest.受講生詳細の一覧検索機能_全件検索が動作すること.executor": "Debug",
-    "Gradle.studentmanagement [:StudentmanagementApplication.main()].executor": "Run",
-    "Gradle.studentmanagement [:catstech.studentmanagement.StudentmanagementApplication.main()].executor": "Run",
-    "Gradle.studentmanagement [dependencies].executor": "Run",
-    "Gradle.studentmanagement.executor": "Run",
-    "Gradle.ソースのダウンロード.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Owner/IdeaProjects/studentmanagement/src/test/resources",
-    "project.structure.last.edited": "モジュール",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "preferences.externalResources",
-    "アプリケーション.StudentmanagementApplication.executor": "Run"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;Gradle.StudentControllerTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.StudentControllerTest.受講生詳細の一覧検索が実行できて空のリストが返ってくること.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.StudentControllerTest.受講生詳細の受講生でIDに数字以外を用いたときに入力チェックがかかること.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.StudentControllerTest.受講生詳細の受講生で適切な値を入力した時に入力チェックに以上が発生しないこと.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.StudentConverterTest.受講生に受講生コース情報が正しくマッピングされていること.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.StudentManagement [:StudentmanagementApplication.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.StudentManagement [:catstech.studentmanagement.StudentmanagementApplication.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.StudentRepositoryTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.StudentRepositoryTest.受講生の登録が行えること.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.StudentRepositoryTest.受講生コースの登録が行えるこ.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.StudentRepositoryTest.受講生コース情報の更新が行われること.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.StudentRepositoryTest.受講生情報の更新が行われること.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.StudentServiceTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.StudentServiceTest.受講生詳細の一覧検索機能_全件検索が動作すること.executor&quot;: &quot;Debug&quot;,
+    &quot;Gradle.studentmanagement [:StudentmanagementApplication.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.studentmanagement [:catstech.studentmanagement.StudentmanagementApplication.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.studentmanagement [dependencies].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.studentmanagement.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ソースのダウンロード.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Owner/IdeaProjects/studentmanagement/src/test/resources&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;モジュール&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.externalResources&quot;,
+    &quot;アプリケーション.StudentmanagementApplication.executor&quot;: &quot;Run&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="catstech.studentmanagement.service" />
@@ -203,7 +199,7 @@
       <recent name="catstech.studentmanagement.service" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.StudentServiceTest">
+  <component name="RunManager" selected="Gradle.StudentControllerTest">
     <configuration name="名前未設定" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="21" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -261,6 +257,30 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
+    <configuration name="StudentRepositoryTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;catstech.studentmanagement.repository.StudentRepositoryTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
     <configuration name="StudentRepositoryTest.受講生コースの登録が行えるこ" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -275,30 +295,6 @@
             <option value=":test" />
             <option value="--tests" />
             <option value="&quot;catstech.studentmanagement.repository.StudentRepositoryTest.受講生コースの登録が行えるこ&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="StudentRepositoryTest.受講生情報の更新が行われること" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;catstech.studentmanagement.repository.StudentRepositoryTest.受講生情報の更新が行われること&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -502,17 +498,17 @@
       <item itemvalue="Gradle.StudentControllerTest" />
       <item itemvalue="Gradle.StudentConverterTest" />
       <item itemvalue="Gradle.StudentRepositoryTest.受講生コースの登録が行えるこ" />
-      <item itemvalue="Gradle.StudentRepositoryTest.受講生情報の更新が行われること" />
       <item itemvalue="Gradle.StudentServiceTest" />
+      <item itemvalue="Gradle.StudentRepositoryTest" />
       <item itemvalue="アプリケーション.名前未設定" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.StudentControllerTest" />
+        <item itemvalue="Gradle.StudentRepositoryTest" />
         <item itemvalue="Gradle.StudentServiceTest" />
-        <item itemvalue="Gradle.StudentRepositoryTest.受講生情報の更新が行われること" />
         <item itemvalue="Gradle.StudentRepositoryTest.受講生コースの登録が行えるこ" />
         <item itemvalue="Gradle.StudentConverterTest" />
-        <item itemvalue="Gradle.StudentControllerTest" />
       </list>
     </recent_temporary>
   </component>
