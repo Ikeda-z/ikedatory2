@@ -8,7 +8,7 @@ on:
 
 env:
   EC2_USER: 'ec2-user'
-  EC2_HOST: '13.231.209.19'
+  EC2_HOST: '13.230.185.10'
   SRC_PATH: 'build/libs/*.jar'
   DEST_PATH: '/home/ec2-user/StudentManagement.jar'
 
@@ -55,7 +55,7 @@ jobs:
           if [ -f /etc/systemd/system/StudentManagement.service ]; then
            echo "already exists Service File"
           else
-          cat <<EOL | sudo tee -a /etc/system/StudentManagement.service
+          cat <<EOL | sudo tee -a /etc/systemd/system/StudentManagement.service
           [Unit]
           Description = StudentManagement App
           
